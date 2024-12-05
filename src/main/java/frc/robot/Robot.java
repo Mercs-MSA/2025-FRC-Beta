@@ -4,7 +4,10 @@
 
 package frc.robot;
 
+import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj2.command.CommandScheduler;
+
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -13,10 +16,20 @@ import edu.wpi.first.wpilibj.TimedRobot;
  * project.
  */
 public class Robot extends TimedRobot {
-  private final RobotContainer m_robotContainer = new RobotContainer();
+  // public static final CTREConfigs ctreConfigs = new CTREConfigs();
+  
+  
+  Pose2d apiltagPlusGyro = new Pose2d();
+  //private AnalogInput PSU_Volt_Monitor = new AnalogInput(0);
 
+  /**
+   * This function is run when the robot is first started up and should be used for any
+   * initialization code.
+   */
   @Override
   public void robotInit() {
+    // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
+    // autonomous chooser on the dashboard.
   }
 
   /**
@@ -28,7 +41,13 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotPeriodic() {
+    // Runs the Scheduler.  This is responsible for polling buttons, adding newly-scheduled
+    // commands, running already-scheduled commands, removing finished or interrupted commands,
+    // and running subsystem periodic() methods.  This must be called from the robot's periodic
+    // block in order for anything in the Command-based framework to work.
+    CommandScheduler.getInstance().run();
   }
+
 
   /** This function is called once each time the robot enters Disabled mode. */
   @Override
@@ -46,8 +65,7 @@ public class Robot extends TimedRobot {
 
   /** This function is called periodically during autonomous. */
   @Override
-  public void autonomousPeriodic() {
-  }
+  public void autonomousPeriodic() {}
 
   @Override
   public void teleopInit() {
@@ -59,11 +77,27 @@ public class Robot extends TimedRobot {
   }
 
   @Override
-  public void testInit() {
-  }
+  public void testInit() {}
 
   /** This function is called periodically during test mode. */
   @Override
   public void testPeriodic() {
-  }
+    // test_joystick.a().whileTrue(
+    //   m_robotContainer.drivetrain.sysIdQuasistatic(SysIdRoutine.Direction.kReverse)
+    // );
+
+    // test_joystick.b().whileTrue(
+    //     m_robotContainer.drivetrain.sysIdQuasistatic(SysIdRoutine.Direction.kForward)
+    // );
+
+    // test_joystick.x().whileTrue(
+    //     m_robotContainer.drivetrain.sysIdDynamic(SysIdRoutine.Direction.kReverse)
+    // );
+
+    // test_joystick.y().whileTrue(
+    //     m_robotContainer.drivetrain.sysIdDynamic(SysIdRoutine.Direction.kForward)
+    // );
+    //sys id is application to put file in-convert file to wpilog
+
+}
 }

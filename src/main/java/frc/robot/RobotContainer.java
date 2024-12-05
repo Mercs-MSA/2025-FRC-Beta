@@ -5,6 +5,27 @@
 package frc.robot;
 
 public class RobotContainer {
+
+  // /* Setting up bindings for necessary control of the swerve drive platform */
+  // private final CommandXboxController driverJoystick = new CommandXboxController(0); 
+  // private final CommandXboxController operator = new CommandXboxController(1); 
+
+  // public final XboxController driver_rumble = new XboxController(0); 
+  // public final XboxController operator_rumble = new XboxController(1); 
+
   public RobotContainer() {
+    driverControls();
+    operatorControls();
+
+    // NamedCommands.registerCommands(autonomousCommands);
+    // autoChooser = AutoBuilder.buildAutoChooser("Do Nothing");
+    // SmartDashboard.putData("Auto Mode", autoChooser);
   }
+  
+  public void driverControls(){
+  }
+
+  public void operatorControls(){
+  }
+
 }
