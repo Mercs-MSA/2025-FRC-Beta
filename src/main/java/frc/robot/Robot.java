@@ -20,7 +20,6 @@ public class Robot extends TimedRobot {
   
   
   Pose2d apiltagPlusGyro = new Pose2d();
-  //private AnalogInput PSU_Volt_Monitor = new AnalogInput(0);
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -51,53 +50,30 @@ public class Robot extends TimedRobot {
 
   /** This function is called once each time the robot enters Disabled mode. */
   @Override
-  public void disabledInit() {
-  }
+  public void disabledInit() {}
   
   @Override
-  public void disabledPeriodic() {
-  }
+  public void disabledPeriodic() {}
 
   /** This autonomous runs the autonomous command selected by your {@link RobotContainer} class. */
   @Override
-  public void autonomousInit() {
-  }
+  public void autonomousInit() {}
 
   /** This function is called periodically during autonomous. */
   @Override
   public void autonomousPeriodic() {}
 
   @Override
-  public void teleopInit() {
-  }
+  public void teleopInit() {}
 
   /** This function is called periodically during operator control. */
    @Override
-  public void teleopPeriodic(){
-  }
+  public void teleopPeriodic(){}
 
   @Override
   public void testInit() {}
 
   /** This function is called periodically during test mode. */
   @Override
-  public void testPeriodic() {
-    // test_joystick.a().whileTrue(
-    //   m_robotContainer.drivetrain.sysIdQuasistatic(SysIdRoutine.Direction.kReverse)
-    // );
-
-    // test_joystick.b().whileTrue(
-    //     m_robotContainer.drivetrain.sysIdQuasistatic(SysIdRoutine.Direction.kForward)
-    // );
-
-    // test_joystick.x().whileTrue(
-    //     m_robotContainer.drivetrain.sysIdDynamic(SysIdRoutine.Direction.kReverse)
-    // );
-
-    // test_joystick.y().whileTrue(
-    //     m_robotContainer.drivetrain.sysIdDynamic(SysIdRoutine.Direction.kForward)
-    // );
-    //sys id is application to put file in-convert file to wpilog
-
-}
+  public void testPeriodic() {}
 }

@@ -10,9 +10,6 @@ public class RobotContainer {
   // private final CommandXboxController driverJoystick = new CommandXboxController(0); 
   // private final CommandXboxController operator = new CommandXboxController(1); 
 
-  // public final XboxController driver_rumble = new XboxController(0); 
-  // public final XboxController operator_rumble = new XboxController(1); 
-
   public RobotContainer() {
     driverControls();
     operatorControls();
@@ -21,7 +18,7 @@ public class RobotContainer {
     // autoChooser = AutoBuilder.buildAutoChooser("Do Nothing");
     // SmartDashboard.putData("Auto Mode", autoChooser);
   }
-  
+
   public void driverControls(){
   }
 
